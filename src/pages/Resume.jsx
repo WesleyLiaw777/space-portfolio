@@ -24,7 +24,6 @@ const Resume = () => {
           className="resume__grid"
           data-aos="fade-up"
           data-aos-delay="500"
-          data-aos-once="true"
         >
           <div className="resume__image">
             <img src={Me} alt="" />
@@ -67,7 +66,6 @@ const Resume = () => {
           className="resume__grid"
           data-aos="fade-up"
           data-aos-delay="500"
-          data-aos-once="true"
         >
           <div className="resume__title--description">Education</div>
           <div>
@@ -88,7 +86,6 @@ const Resume = () => {
           className="resume__grid"
           data-aos="fade-up"
           data-aos-delay="500"
-          data-aos-once="true"
         >
           <div className="resume__title--description">Experience</div>
           <div>
@@ -118,7 +115,6 @@ const Resume = () => {
           className="resume__grid"
           data-aos="fade-up"
           data-aos-delay="500"
-          data-aos-once="true"
         >
           <div className="resume__title--description">Projects</div>
           <div>
@@ -152,7 +148,6 @@ const Resume = () => {
           className="resume__grid"
           data-aos="fade-up"
           data-aos-delay="500"
-          data-aos-once="true"
         >
           <div className="resume__title--description">Technical Skills</div>
           <div>
@@ -169,7 +164,6 @@ const Resume = () => {
           className="resume__grid"
           data-aos="fade-up"
           data-aos-delay="500"
-          data-aos-once="true"
         >
           <div className="resume__title--description">Transferrable Skills</div>
           <div>
@@ -186,7 +180,6 @@ const Resume = () => {
           className="resume__grid resume__bottom"
           data-aos="fade-up"
           data-aos-delay="500"
-          data-aos-once="true"
         >
           <div className="resume__title--description">References</div>
           <div>Available upon request</div>
