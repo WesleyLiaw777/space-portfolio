@@ -8,7 +8,7 @@ function Skills() {
       <div data-aos="fade-up" data-aos-delay="300">
         <AnimatedHeader
           className={"skills__header--center"}
-          headerText={"Tech-Stack"}
+          headerText={"Tech Stack"}
         />
       </div>
       <div className="skills__button--wrapper">

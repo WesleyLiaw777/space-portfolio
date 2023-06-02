@@ -3,8 +3,6 @@ export const transferrableSkillsConfig = [
   "Exceptional communication skills",
   "Outstanding work ethic",
   "Effective teaching skills",
-  "Professional client relations",
   "Quick learner",
   "Creative problem solver",
-  "Extraordinary time management skills",
 ];

@@ -5,6 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { AiFillLinkedin } from "react-icons/ai";
 import { experienceConfig } from "../config/resume/experienceConfig";
 import { technicalSkillsConfig } from "../config/resume/technicalSkillsConfig";
+import { projectsConfig } from "../config/resume/projectsConfig";
 import { transferrableSkillsConfig } from "../config/resume/transferrableSkillsConfig";
 import { AnimatedHeader } from "../components/AnimateHeader";
 
@@ -19,7 +20,12 @@ const Resume = () => {
         <AnimatedHeader className={"projects__header"} headerText={"Resume"} />
       </div>
       <div className="resume__wrapper">
-        <div className="resume__grid" data-aos="fade-up" data-aos-delay="500">
+        <div
+          className="resume__grid"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-once="true"
+        >
           <div className="resume__image">
             <img src={Me} alt="" />
           </div>
@@ -52,31 +58,38 @@ const Resume = () => {
             </div>
             <div>
               A highly motivated software engineer prepared to utilise
-              exceptional software, problem-solving and communication skills to
-              further my programming passion as a website developer.
+              industry-level software, problem-solving, and communication skills
+              to further my programming passion as a website developer.
             </div>
           </div>
         </div>
-
-        <div className="resume__grid" data-aos="fade-up" data-aos-delay="500">
+        <div
+          className="resume__grid"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-once="true"
+        >
           <div className="resume__title--description">Education</div>
           <div>
             <div className="resume__education--wrapper">
               <div className="resume__education">
                 <div className="resume__job--name">
-                  University of Technology, Sydney
+                  University of Texas at Austin
                 </div>
                 <div>
-                  Bachelor of Engineering (Honours), Software Engineering Major
-                  Diploma in Professional Engineering Practice
+                  Bachelor of Science in Electrical and Computer Engineering
                 </div>
               </div>
-              <div className="resume__job--date">2018 - 2021</div>
+              <div className="resume__job--date">2018</div>
             </div>
           </div>
         </div>
-
-        <div className="resume__grid" data-aos="fade-up" data-aos-delay="500">
+        <div
+          className="resume__grid"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-once="true"
+        >
           <div className="resume__title--description">Experience</div>
           <div>
             {experienceConfig.map((experience, index) => (
@@ -100,8 +113,47 @@ const Resume = () => {
             ))}
           </div>
         </div>
+        ``
+        <div
+          className="resume__grid"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-once="true"
+        >
+          <div className="resume__title--description">Projects</div>
+          <div>
+            {projectsConfig.map((project, index) => (
+              <div className="resume__project--wrapper" key={index}>
+                <div className="resume__project">
+                  <div>
+                    <div className="resume__job--name">
+                      {project.name} |{" "}
+                      <a className="project__link" href={project.link} target="_blank">
+                        Link
+                      </a>{" "}
+                      |{" "}
+                      <a className="project__link" href={project.github} target="_blank">
+                        Github
+                      </a>{" "}
+                    </div>
+                  </div>
+                </div>
 
-        <div className="resume__grid" data-aos="fade-up" data-aos-delay="500">
+                <ul className="resume__list-wrapper">
+                  {project.description.map((description, index) => (
+                    <li key={index}>{description}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div
+          className="resume__grid"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-once="true"
+        >
           <div className="resume__title--description">Technical Skills</div>
           <div>
             <div>
@@ -113,8 +165,12 @@ const Resume = () => {
             </div>
           </div>
         </div>
-
-        <div className="resume__grid" data-aos="fade-up" data-aos-delay="500">
+        <div
+          className="resume__grid"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-once="true"
+        >
           <div className="resume__title--description">Transferrable Skills</div>
           <div>
             <div>
@@ -126,14 +182,14 @@ const Resume = () => {
             </div>
           </div>
         </div>
-
         <div
           className="resume__grid resume__bottom"
           data-aos="fade-up"
           data-aos-delay="500"
+          data-aos-once="true"
         >
           <div className="resume__title--description">References</div>
-          <div>Available Upon request</div>
+          <div>Available upon request</div>
         </div>
       </div>
     </div>

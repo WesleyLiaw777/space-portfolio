@@ -6,7 +6,6 @@ function Project({ image, onClick, title }) {
     <div className="project" onClick={onClick}>
       <div className="project__description">{title}</div>
       <img src={image} alt="project-img" className="project__img" />
-      
     </div>
   );
 }

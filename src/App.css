@@ -832,10 +832,13 @@ nav.open {
 
 .modal__type {
   margin-bottom: 20px;
+  color: gray;
+  opacity: 0.7;
 }
 
 .modal__description {
   margin-bottom: 25px;
+  line-height: 1.5;
 }
 
 .modal__view-online--button {
@@ -1039,6 +1042,10 @@ nav.open {
   color: #242424;
 }
 
+.project__link{
+  color: rgb(71, 191, 239);
+}
+
 .resume__education {
   max-width: 500px;
 }
@@ -1105,6 +1112,10 @@ nav.open {
   margin-bottom: 50px;
 }
 
+.resume__project--wrapper:not(:last-child) {
+  margin-bottom: 24px;
+}
+
 .resume__education--wrapper,
 .resume__job {
   display: flex;
@@ -1113,6 +1124,10 @@ nav.open {
 
 .resume__job {
   margin-bottom: 24px;
+}
+
+.resume__project{
+  margin-bottom: 16px;
 }
 
 .resume__job--name {
@@ -1250,7 +1265,7 @@ nav.open {
 .contact__formbtn:hover {
   background-color: rgba(0, 0, 0, 0.95);
   box-shadow: 0px 0px 10px #000000;
-  cursor: none;
+  cursor: pointer;
 }
 .contact__formbtn:active {
   transform: scale(0.98);

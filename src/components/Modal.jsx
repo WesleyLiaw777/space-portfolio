@@ -13,7 +13,7 @@ function Modal({ isOpen, project, closeHandler }) {
             <div className="modal__top--image">
               <img src={project.topImage} alt="" />
             </div>
-            <div className="modal__scroll-down">Scroll down</div>
+            <div className="modal__scroll-down"></div>
           </div>
 
           <div className="modal__project--background">
@@ -42,20 +42,34 @@ function Modal({ isOpen, project, closeHandler }) {
         </div>
         <div className="modal__grid--wrapper">
           <div className="modal__grid--left modal__grid">
-            <div className="modal__grid--image">
+            <div
+              className="modal__grid--image"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
               <img src={project.firstImage} alt="" />
             </div>
             <div></div>
           </div>
           <div className="modal__grid--right modal__grid">
             <div></div>
-            <div className="modal__grid--image">
+            <div
+              className="modal__grid--image"
+              data-aos="fade-up"
+              data-aos-delay="800"
+              data-aos-offset="1900"
+            >
               <img src={project.secondImage} alt="" />
             </div>
           </div>
           <div className="modal__grid--middle modal__grid">
             <div></div>
-            <div className="modal__grid--image">
+            <div
+              className="modal__grid--image"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-offset="1000"
+            >
               <img src={project.thirdImage} alt="" />
             </div>
           </div>

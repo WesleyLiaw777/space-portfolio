@@ -1,4 +1,3 @@
-import { init, sendForm } from "@emailjs/browser";
 import emailjs from "@emailjs/browser";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
@@ -15,22 +14,19 @@ function Contact({ setRotateSpeed }) {
     text: "Get in touch!",
     modifier: "",
   });
+  const [sent, setIsSent] = useState(false);
   const form = useRef();
-
-  useEffect(() => {
-    init(process.env.REACT_APP_USER_ID);
-  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
     setIsSending(true);
     setRotateSpeed(60);
-    sendForm(
-        // "gmail",
+    emailjs
+      .sendForm(
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         form.current,
-        process.env.REACT_APP_USER_ID
+        process.env.REACT_APP_API_KEY
       )
       .then(
         (res) => {
@@ -39,6 +35,7 @@ function Contact({ setRotateSpeed }) {
           form.current.reset();
           setHeaderText({ text: "Message sent!", modifier: "-success" });
           setIsSending(false);
+          setIsSent(true);
         },
         (err) => {
           console.log(err.text);
@@ -75,14 +72,22 @@ function Contact({ setRotateSpeed }) {
               headerText={headerText.text}
             />
           </div>
-          <input type="text" placeholder="Name..." required name="user_name" />
           <input
+            disabled={sent}
+            type="text"
+            placeholder="Name..."
+            required
+            name="user_name"
+          />
+          <input
+            disabled={sent}
             type="email"
             placeholder="Email..."
             required
             name="user_email"
           />
           <textarea
+            disabled={sent}
             name="message"
             id=""
             cols="30"

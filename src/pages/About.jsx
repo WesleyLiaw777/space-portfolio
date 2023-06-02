@@ -15,16 +15,15 @@ const about = [
   "GitHub",
   "NPM",
   "Yarn",
-  "ThreeJS",
   "Context",
   "React",
   "Redux",
   "State Management",
-  "Vue",
-  "AWS",
   "CSS frameworks",
   "Web Widgets",
-  "Wordpress",
+  "Firebase",
+  "Tailwind CSS",
+  "Material UI",
 ];
 
 function randomSkill() {
