@@ -7,6 +7,6 @@ export const technicalSkillsConfig = [
   "Redux",
   "Firebase",
   "Next.js",
-  "MaterialUI",
+  "Material UI",
   "Tailwind CSS",
 ];
