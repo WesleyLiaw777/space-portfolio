@@ -32,14 +32,4 @@ export const projectsConfig = [
       "Built using React, JavaScript, HTML, and CSS best practices.",
     ],
   },
-  {
-    name: "Disney Plus Clone",
-    link: "https://disney-clone-henna.vercel.app/",
-    github: "https://github.com/WesleyLiaw777/disney_clone",
-    description: [
-      "Fetched data from the TMDB API, allowing users to view trailers and additional information about movies/TV shows.",
-      "Implemented dynamic routing to enable seamless navigation between different movie/TV show pages, enhancing usability.",
-      "Created a fully responsive movie app using React, JavaScript, HTML, and CSS best practices.",
-    ],
-  },
 ];

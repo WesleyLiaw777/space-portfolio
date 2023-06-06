@@ -1150,6 +1150,10 @@ nav.open {
   font-size: 18px;
 }
 
+.resume__job--description {
+  margin-top: 4px;
+}
+
 .resume__title--description {
   font-weight: 700;
 }

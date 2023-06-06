@@ -1,5 +1,5 @@
 import React from "react";
-import Me from "../assets/PROFILE_STRAIGHT.jpg";
+import Me from "../assets/profileStraight.jpg";
 import { FaDownload } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { AiFillLinkedin } from "react-icons/ai";
@@ -20,11 +20,7 @@ const Resume = () => {
         <AnimatedHeader className={"projects__header"} headerText={"Resume"} />
       </div>
       <div className="resume__wrapper">
-        <div
-          className="resume__grid"
-          data-aos="fade-up"
-          data-aos-delay="500"
-        >
+        <div className="resume__grid" data-aos="fade-up" data-aos-delay="500">
           <div className="resume__image">
             <img src={Me} alt="" />
           </div>
@@ -62,11 +58,7 @@ const Resume = () => {
             </div>
           </div>
         </div>
-        <div
-          className="resume__grid"
-          data-aos="fade-up"
-          data-aos-delay="500"
-        >
+        <div className="resume__grid" data-aos="fade-up" data-aos-delay="500">
           <div className="resume__title--description">Education</div>
           <div>
             <div className="resume__education--wrapper">
@@ -74,26 +66,34 @@ const Resume = () => {
                 <div className="resume__job--name">
                   University of Texas at Austin
                 </div>
-                <div>
-                  Bachelor of Science in Electrical and Computer Engineering
-                </div>
+                <div>Bachelor of Science & Arts in Computer Science</div>
               </div>
-              <div className="resume__job--date">2018</div>
+              <div className="resume__job--date"></div>
             </div>
           </div>
         </div>
-        <div
-          className="resume__grid"
-          data-aos="fade-up"
-          data-aos-delay="500"
-        >
+        <div className="resume__grid" data-aos="fade-up" data-aos-delay="500">
           <div className="resume__title--description">Experience</div>
           <div>
             {experienceConfig.map((experience, index) => (
               <div className="resume__job--wrapper" key={index}>
                 <div className="resume__job">
                   <div>
-                    <div className="resume__job--name">{experience.name}</div>
+                    <div className="resume__job--name">
+                      {experience.name}
+                      {experience.certificate && (
+                        <>
+                          |{" "}
+                          <a
+                            className="project__link"
+                            href="/certificate.pdf"
+                            target="_blank"
+                          >
+                            Certificate
+                          </a>
+                        </>
+                      )}
+                    </div>
                     <div className="resume__job--description">
                       {experience.title}
                     </div>
@@ -110,12 +110,7 @@ const Resume = () => {
             ))}
           </div>
         </div>
-        ``
-        <div
-          className="resume__grid"
-          data-aos="fade-up"
-          data-aos-delay="500"
-        >
+        <div className="resume__grid" data-aos="fade-up" data-aos-delay="500">
           <div className="resume__title--description">Projects</div>
           <div>
             {projectsConfig.map((project, index) => (
@@ -124,11 +119,19 @@ const Resume = () => {
                   <div>
                     <div className="resume__job--name">
                       {project.name} |{" "}
-                      <a className="project__link" href={project.link} target="_blank">
+                      <a
+                        className="project__link"
+                        href={project.link}
+                        target="_blank"
+                      >
                         Link
                       </a>{" "}
                       |{" "}
-                      <a className="project__link" href={project.github} target="_blank">
+                      <a
+                        className="project__link"
+                        href={project.github}
+                        target="_blank"
+                      >
                         Github
                       </a>{" "}
                     </div>
@@ -144,11 +147,7 @@ const Resume = () => {
             ))}
           </div>
         </div>
-        <div
-          className="resume__grid"
-          data-aos="fade-up"
-          data-aos-delay="500"
-        >
+        <div className="resume__grid" data-aos="fade-up" data-aos-delay="500">
           <div className="resume__title--description">Technical Skills</div>
           <div>
             <div>
@@ -160,11 +159,7 @@ const Resume = () => {
             </div>
           </div>
         </div>
-        <div
-          className="resume__grid"
-          data-aos="fade-up"
-          data-aos-delay="500"
-        >
+        <div className="resume__grid" data-aos="fade-up" data-aos-delay="500">
           <div className="resume__title--description">Transferrable Skills</div>
           <div>
             <div>
